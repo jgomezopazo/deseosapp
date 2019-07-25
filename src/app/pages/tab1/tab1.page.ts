@@ -16,11 +16,6 @@ export class Tab1Page {
               private alertController:AlertController) {
   }
 
-  listaSeleccionada(lista: Lista) {
-    console.log({ lista });
-    this.router.navigateByUrl(`/tabs/tab1/agregar/${lista.id}`);
-  }
-
   async agregarLista(){
  
     const alert = await this.alertController.create({

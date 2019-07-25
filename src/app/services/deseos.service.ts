@@ -22,6 +22,14 @@ export class DeseosService {
       return nuevaLista.id;
    }
 
+   borrarLista(lista: Lista) {
+      this.deseos = this.deseos.filter((dataLista) => {
+        return lista.id !== dataLista.id;
+      });
+      
+      this.guardarStorage();
+   }
+
    obtenerLista(id: string | number) {
       id = Number(id);
 
