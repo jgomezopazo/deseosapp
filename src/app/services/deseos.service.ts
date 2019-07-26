@@ -30,6 +30,17 @@ export class DeseosService {
       this.guardarStorage();
    }
 
+   editarLista(lista: Lista) {
+
+    console.log("Editar Lista");
+    this.deseos = this.deseos.filter((dataLista) => {
+      return lista.id !== dataLista.id;
+    });
+    this.deseos.push(lista);
+    
+    this.guardarStorage();
+ }
+
    obtenerLista(id: string | number) {
       id = Number(id);
 
